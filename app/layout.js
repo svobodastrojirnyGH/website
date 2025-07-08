@@ -1,15 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "@/components/ui/Navbar";
 import "./globals.css";
+import { Exo_2, Stardos_Stencil } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const exo2 = Exo_2({
+    subsets: ['latin'],
+    variable: "--font-exo2"
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const stardosStencil = Stardos_Stencil({
+    weight: ["400", "700"],
+    subsets: ['latin'],
+    variable: "--font-stardos-stencil"
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -18,11 +20,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${exo2.variable} ${stardosStencil.variable}`}>
+      <body className="font-exo2 overflow-x-hidden">
+        {/* <Navbar /> */}
+        <Navbar />
+        <main>
+            {children}
+        </main>
       </body>
     </html>
   );
