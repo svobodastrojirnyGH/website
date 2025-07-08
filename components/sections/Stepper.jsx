@@ -15,8 +15,8 @@ const steps = [
 	},
 	{
 		number: 3,
-		title: "Výroba & kontrola",
-		text: "Využíváme moderní CNC a zámečnické technologie pro přesné zpracování.",
+		title: "Dodání & podpora",
+		text: "Hotový výrobek doručíme včas a jsme připraveni na případné úpravy či servis..",
 	},
 ];
 

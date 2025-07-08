@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import { motion } from 'framer-motion';
 const reviews = [
   {
     name: "Jan Novák",
@@ -17,6 +19,11 @@ const reviews = [
   },
 ];
 
+const reviewsAnims = {
+	opacity: { duration: 1.2, initDelay: 0, stagger: 0.7 },
+	scale: { duration: 0.6, initDelay: 0, stagger: 0.8 },
+};
+
 function Recenze() {
   return (
     <section className="bg-white py-20">
@@ -28,16 +35,23 @@ function Recenze() {
 
         <div className="grid gap-10 md:grid-cols-3">
           {reviews.map((review, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-gray-50 rounded-lg p-6 shadow-md border border-gray-200 text-left"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    opacity: { duration: reviewsAnims.opacity.duration, ease: "easeOut", delay: reviewsAnims.opacity.initDelay + index*reviewsAnims.opacity.stagger},
+                    scale: { duration: reviewsAnims.scale.duration, ease: "backOut", delay: reviewsAnims.scale.initDelay + index*reviewsAnims.scale.stagger },
+                }}
             >
               <p className="text-gray-700 mb-4 italic">“{review.text}”</p>
               <div className="text-sm text-gray-600">
                 <strong className="text-blue-700">{review.name}</strong>
                 <div>{review.title}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
