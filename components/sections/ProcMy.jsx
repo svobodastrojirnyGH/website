@@ -32,8 +32,8 @@ const cards = [
 
 const cardAnim = {
 	duration: 0.6,
-	initDelay: 0.5,
-	stagger: 0.4,
+	initDelay: 0.3,
+	stagger: 0.3,
 };
 
 function ProcMy() {

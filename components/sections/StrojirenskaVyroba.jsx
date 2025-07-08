@@ -12,7 +12,7 @@ function StrojirenskaVyroba() {
 				className="max-w-7xl mx-auto px-4"
 				initial={{ opacity: 0, x: -500 }} // start: invisible & 50px left
 				whileInView={{ opacity: 1, x: 0 }} // end: visible & in place
-				viewport={{ once: true, amount: 0.6 }} // trigger once when 60% in view
+				viewport={{ once: true, amount: 0.2 }} // trigger once when 60% in view
 				transition={{ duration: 1, ease: "easeOut" }}
 			>
 				{/* Title */}

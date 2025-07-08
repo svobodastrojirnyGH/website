@@ -1,4 +1,3 @@
-import ContactForm from "@/components/ContactForm";
 import Herosection from "@/components/sections/Herosection";
 import Kontakt from "@/components/sections/Kontakt";
 import ProcMy from "@/components/sections/ProcMy";
@@ -6,7 +5,6 @@ import Recenze from "@/components/sections/Recenze";
 import Stepper from "@/components/sections/Stepper";
 import StrojirenskaVyroba from "@/components/sections/StrojirenskaVyroba";
 import ZamecnickaVyroba from "@/components/sections/ZamecnickaVyroba";
-import ZamecnickaVyroba1 from "@/components/sections/ZamecnickaVyroba1";
 
 export default function Home() {
 	return (

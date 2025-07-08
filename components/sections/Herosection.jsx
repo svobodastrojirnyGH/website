@@ -7,17 +7,8 @@ function Herosection() {
 	return (
 		<section className="font-exo2 relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gray-900">
 			{/* Background Image */}
-			<div className="absolute inset-0 -z-10">
-				<Image
-					src="/videos/lathe1_1st_frame.webp"
-					alt="CNC obrábění"
-					fill
-					className="object-cover object-center blur-sm"
-					priority
-				/>
-				<div className="absolute inset-0 bg-black/25" />{" "}
-				{/*bg-gradient-to-r from-blue-900/80 to-cyan-700/60 */}
-			</div>
+
+				<div className="absolute inset-0 -z-10 bg-black/25" />{" "}
 
 			{/* Background Video */}
 			<Herovideo />
