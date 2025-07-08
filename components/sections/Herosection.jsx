@@ -31,13 +31,13 @@ function Herosection() {
 				<div className="flex flex-col sm:flex-row mt-8 justify-center gap-6 text-lg sm:text-xl">
 					<Link
 						href="#contact"
-						className="px-6 py-3 rounded-lg bg-blue-700 text-white shadow-lg"
+						className="px-6 py-3 rounded-lg bg-blue-700 hover:bg-blue-600 text-white shadow-lg"
 					>
 						Kontakt
 					</Link>
 					<Link
 						href="#gallery"
-						className="px-6 py-3 rounded-lg bg-black/45 backdrop-blur-2xl text-white border-white/45 border-2"
+						className="px-6 py-3 rounded-lg bg-black/45 hover:bg-white/75   backdrop-blur-2xl text-white border-white/45 border-2"
 					>
 						Galerie
 					</Link>

@@ -5,6 +5,7 @@ import Recenze from "@/components/sections/Recenze";
 import Stepper from "@/components/sections/Stepper";
 import StrojirenskaVyroba from "@/components/sections/StrojirenskaVyroba";
 import ZamecnickaVyroba from "@/components/sections/ZamecnickaVyroba";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Stepper />
         <Kontakt />
         <Recenze />
+        <Footer />
 {/* 
 <Herosection />
 <WhyUsSection />          // 1 – trust
