@@ -9,7 +9,7 @@ async function page({ searchParams }) {
     <div>
               <PageHeader
                 title="Kontakt"
-                image="/images/subpage-hero/cnc1.jpg"
+                image="/images/subpage-hero/cnc2.webp"
                 breadcrumb={[
                   { label: 'Domů', href: '/' },
                   { label: 'Galerie' }

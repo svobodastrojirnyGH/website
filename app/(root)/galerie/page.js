@@ -38,7 +38,7 @@ async function page() {
         <div>
       <PageHeader
         title="Galerie"
-        image="/images/subpage-hero/cnc2.jpg"
+        image="/images/subpage-hero/cnc4.webp"
         breadcrumb={[
           { label: 'Domů', href: '/' },
           { label: 'Galerie' }

@@ -99,7 +99,7 @@ export default function AboutPage() {
     <div>
       <PageHeader
         title="O nás"
-        image="/images/subpage-hero/cnc1.jpg"
+        image="/images/subpage-hero/cnc3.webp"
         breadcrumb={[
           { label: 'Domů', href: '/' },
           { label: 'O nás' }

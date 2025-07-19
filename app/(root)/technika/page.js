@@ -20,7 +20,7 @@ export default async function page() {
     <div>
               <PageHeader
                 title="Technologie"
-                image="/images/subpage-hero/cnc1.jpg"
+                image="/images/subpage-hero/cnc1.webp"
                 breadcrumb={[
                   { label: 'Domů', href: '/' },
                   { label: 'Technologie' }
