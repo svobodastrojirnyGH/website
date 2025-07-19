@@ -1,26 +1,11 @@
-'use client'
+import { sendMessage } from '@/app/lib/actions';
 import React from 'react'
-import { useState } from "react";
 
-function ContactForm() {
- const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
-  const [submitted, setSubmitted] = useState(false);
+function ContactForm({ success }) {
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    const submitted = success == 1 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Handle backend submission logic here
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-  };
 
   return (
     <div className="bg-white shadow-xl rounded-xl p-8 w-full">
@@ -32,7 +17,7 @@ function ContactForm() {
           Děkujeme! Brzy se vám ozveme.
         </p>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form action={sendMessage} className="space-y-5">
           <div>
             <label htmlFor="name" className="block font-medium text-gray-700">
               Jméno a příjmení
@@ -42,8 +27,6 @@ function ContactForm() {
               name="name"
               id="name"
               required
-              value={formData.name}
-              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-blue-700 focus:border-blue-700"
             />
           </div>
@@ -57,8 +40,6 @@ function ContactForm() {
               name="email"
               id="email"
               required
-              value={formData.email}
-              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-blue-700 focus:border-blue-700"
             />
           </div>
@@ -72,8 +53,6 @@ function ContactForm() {
               id="message"
               required
               rows={5}
-              value={formData.message}
-              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-blue-700 focus:border-blue-700 resize-none"
             />
           </div>

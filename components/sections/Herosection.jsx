@@ -8,20 +8,22 @@ function Herosection() {
 		<section className="font-exo2 relative h-[100vh] w-full flex items-center justify-center text-white overflow-hidden bg-gray-900">
 			{/* Background Image */}
 
-				<div className="absolute inset-0 -z-10 bg-black/25" />{" "}
+			<div className="absolute inset-0 -z-10 bg-black/25 " />{" "}
 
 			{/* Background Video */}
-			<Herovideo />
+            <Herovideo />
 
 			{/* Gradient overlay */}
-{/* 			<div className="absolute inset-0 bg-gradient-to-r bg-black/25 z-0 back" /> */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/15 z-0 "></div>
+            <div className="absolute inset-0 custom-noise z-10">
+
+            </div>
 {/* 			<div className="absolute inset-0 z-0 backdrop-brightness-75 backdrop-contrast-125" /> */}
 
 			{/* Content */}
 			<div className="bg-deev px-6 backdrop-blur-xs bg-zinc-900/5 py-8 rounded-lg flex flex-col relative z-10 text-center max-w-6xl mb-16">
 				<div className="">
-					<h1 className="text-4xl md:text-3xl font-bold uppercase tracking-widest mb-6 text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)]">
+					<h1 className="text-3xl md:text-4xl font-bold uppercase tracking-widest mb-6 text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)]">
 						CNC obrábění, zámečnická výroba a laserové značení
 					</h1>
 					<p className="text-lg md:text-2xl mb-2 text-white text-shadow-sm drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)]">

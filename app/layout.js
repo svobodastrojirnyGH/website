@@ -22,11 +22,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${exo2.variable} ${stardosStencil.variable}`}>
       <body className="font-exo2 overflow-x-hidden">
-        {/* <Navbar /> */}
-        <Navbar />
-        <main>
             {children}
-        </main>
+
       </body>
     </html>
   );

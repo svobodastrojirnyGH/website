@@ -1,4 +1,3 @@
-// app/components/layout/Navbar.js
 "use client";
 
 import { useEffect, useState } from "react";
@@ -9,29 +8,20 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+    // Mobile Burger
 	const [isOpen, setIsOpen] = useState(false);
+
+    // For Navbar
 	const [scrolled, setScrolled] = useState(false);
 	const pathname = usePathname();
-    
-	useEffect(() => {
-		const handleScroll = () => {
-			const heroHeight = window.innerHeight;
-			// Force scrolled = true on non-homepages
-			setScrolled(pathname !== "/" || window.scrollY >= 0.85 * heroHeight);
-		};
 
-		handleScroll(); // Ensure correct initial state
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-
+    // On first mount + on scroll
 	useEffect(() => {
 		const handleScroll = () => {
 			const heroHeight = window.innerHeight;
 			setScrolled(pathname !== "/" || window.scrollY >= 0.85 * heroHeight);
 		};
-
-		handleScroll(); // 🧠 ← Call it right away on path change
+		handleScroll(); 
 
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
@@ -39,7 +29,6 @@ export default function Navbar() {
 
 	const navLinks = [
 		{ label: "O NÁS", href: "/o-nas" },
-		{ label: "SLUŽBY", href: "/sluzby" },
 		{ label: "TECHNOLOGIE", href: "/technika" },
 		{ label: "GALERIE", href: "/galerie" },
 		{ label: "KONTAKT", href: "/kontakt" },
@@ -48,17 +37,19 @@ export default function Navbar() {
 	return (
 		<header
 			className={`${
-    pathname === '/' ? 'fixed' : 'relative'
-  } top-0 left-0 w-full z-50 shadow-msd h-16 text-white ${
+                    pathname === '/' ? 'fixed' : 'relative'
+                } top-0 left-0 w-full z-50 shadow-msd h-16 text-white ${
 				scrolled
 					? "bg-zinc-900"
 					: "md:bg-gradient-to-b md:from-zinc-900 md:to-transparent bg-zinc-900/75"
 			}`}
 		>
-			{" "}
-			{/* bg-zinc-900/75 */}
+
+            {/* '/' → fixed; '/*' → relative */}
+            {/* '/' + unscrolled → transparent; else → filled */}
 			<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between md:justify-start space-x-12 items-center">
-				{/* Logo */}
+				
+                {/* Logo */}
 				<Link href="/">
 					<Image
 						src="/logos/nat_blue600_linear_256x44.webp"
@@ -69,7 +60,7 @@ export default function Navbar() {
 					/>
 				</Link>
 
-				{/* Desktop nav */}
+				{/* Desktop */}
 				<nav className="hidden  w-full  md:flex justify-around font-medium">
 					{navLinks.map((link) => (
 						<Link
@@ -82,7 +73,7 @@ export default function Navbar() {
 					))}
 				</nav>
 
-				{/* Mobile toggle */}
+				{/* Mobile burgfer */}
 				<button
 					onClick={() => setIsOpen((prev) => !prev)}
 					className="md:hidden focus:outline-none"
@@ -90,7 +81,8 @@ export default function Navbar() {
 					{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 				</button>
 			</div>
-			{/* Animated Mobile Menu */}
+
+			{/* Mobile Menu anim */}
 			<AnimatePresence>
 				{isOpen && (
 					<motion.div

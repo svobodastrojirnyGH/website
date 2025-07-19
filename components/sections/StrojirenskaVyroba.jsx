@@ -34,7 +34,7 @@ function StrojirenskaVyroba() {
 							alt="Strojírenská výroba"
 							fill
 							className="object-cover"
-							priority
+                            loading="lazy"
 						/>
 						{/* Overlay text (mobile only) */}
 						<div className="md:hidden absolute inset-0 bg-black/40 backdrop-blur-sm text-white p-6 flex flex-col justify-center">
