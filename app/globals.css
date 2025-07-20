@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 @theme {
 	--font-exo2: var(--font-exo2);
 	--font-stardos-stencil: var(--stardos-stencil);
 }
 
 @layer utilities {
-    
 }
 
 @layer components {
+
 
     .custom-noise {
         background-image: url("/textures/custom-noise.svg");
@@ -59,14 +63,14 @@
 
 	/* VYROBY STYLING */
 	.vyroba-list-ul {
-		@apply space-y-10;
+		@apply space-y-10 ;
 	}
 
 	.vyroba-list-li {
 		@apply flex items-center gap-4;
 	}
 	.vyroba-list-icon {
-		@apply w-10 h-10 mt-1 shrink-0 text-red-500;
+		@apply w-10 h-10 mt-1 shrink-0 text-cyan-400 md:text-blue-500;
 	}
 
 	.vyroba-list-li-subwrap {

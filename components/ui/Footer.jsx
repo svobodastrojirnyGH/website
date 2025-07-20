@@ -4,8 +4,8 @@ import { Facebook, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <div className="px-4 py-12 bg-white">
-      <footer className="bg-blue-800 text-white rounded-2xl max-w-6xl mx-auto px-6 py-6 shadow-md">
+    <div className="md:px-4 md:py-12 bg-white">
+      <footer className="bg-blue-800 text-white md:rounded-2xl max-w-6xl mx-auto px-6 py-6 shadow-md">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Left: Company Info */}
           <div className="text-center md:text-left">
@@ -24,7 +24,7 @@ export default function Footer() {
             >
               <Facebook size={24} />
             </a>
-            <a
+            {/* <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function Footer() {
               className="hover:text-pink-300 transition-colors"
             >
               <Instagram size={24} />
-            </a>
+            </a> */}
           </div>
 
           {/* Right: Credits */}

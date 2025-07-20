@@ -7,9 +7,11 @@ import nodemailer from 'nodemailer';
 
 
 export async function sendMessage(formData) {
-  const name = formData.get('name')
-  const email = formData.get('email')
-  const message = formData.get('message')
+
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const message = formData.get('message');
+  const callbackUrl = formData.get('callbackUrl');
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -30,13 +32,7 @@ export async function sendMessage(formData) {
       ${message}
     `,
   })
-
-  console.log('[server action] Message received:', { name, email, message })
-
-  // Optional: save to DB or send email
-
-  // Redirect back with a query param to show a thank you message
-  redirect('/kontakt?submitted=1')
+  redirect(`${callbackUrl}?submitted=1`)
 }
 
 export async function authenticate(prevState, formData) {

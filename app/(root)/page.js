@@ -2,39 +2,25 @@ import Herosection from "@/components/sections/Herosection";
 import Kontakt from "@/components/sections/Kontakt";
 import ProcMy from "@/components/sections/ProcMy";
 import Recenze from "@/components/sections/Recenze";
+import Sluzba from "@/components/sections/Sluzba";
+
 import Stepper from "@/components/sections/Stepper";
-import StrojirenskaVyroba from "@/components/sections/StrojirenskaVyroba";
-import ZamecnickaVyroba from "@/components/sections/ZamecnickaVyroba";
-import Footer from "@/components/ui/Footer";
 
-export default function Home() {
+import { zamecnickePrace, strojirenskaVyroba } from "@/data/sluzbyData";
 
-    console.log("NEXT_PUBLIC_SANITY_API_VERSION")
-  console.log(process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2025-07-16')
+export default async function Home({searchParams}) {
 
-  console.log("NEXT_PUBLIC_SANITY_DATASET")
-  console.log(process.env.NEXT_PUBLIC_SANITY_DATASET)
-  console.log("NEXT_PUBLIC_SANITY_PROJECT_ID")
-   console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID)
+    const submitted = await (await searchParams).submitted;
+
 	return (
 		<>
         <Herosection />
         <ProcMy />
-        <StrojirenskaVyroba />
-        <ZamecnickaVyroba />
+        <Sluzba data={strojirenskaVyroba} />
+        <Sluzba data={zamecnickePrace} />
         <Stepper />
-        <Kontakt />
+        <Kontakt callbackUrl={"/"} submitted={submitted}/>
         <Recenze />
-        <Footer />
-{/* 
-<Herosection />
-<WhyUsSection />          // 1 – trust
-<MachiningSection />      // 2 – CNC
-<MetalworkSection />      // 3 – Zámečnictví
-<ProcessSection />        // 4 – How it works
-<AboutUsPreview />        // 5 – Short about us
-<ContactCta />      
-			 */}
 		</>
 	);
 }

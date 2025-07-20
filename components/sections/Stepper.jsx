@@ -51,7 +51,7 @@ function Stepper() {
 								scale: { duration: stepsAnims.scale.duration, ease: "backOut", delay: stepsAnims.scale.initDelay + index*stepsAnims.scale.stagger },
 							}}
 						>
-							<div className="flex flex-col items-center">
+							<div className="flex flex-col items-center ">
 								<div className="flex-shrink-0 relative top-0 -mt-16">
 									<div className="flex items-center justify-center h-20 w-20 rounded-full bg-blue-700 text-white border-4 border-white text-xl font-semibold">
 										{step.number}
@@ -61,7 +61,7 @@ function Stepper() {
 									<h4 className="text-lg leading-6 font-semibold text-gray-900">
 										{step.title}
 									</h4>
-									<p className="mt-2 text-base leading-6 text-gray-500">
+									<p className="mt-2 md:pb-0 pb-8 text-base leading-6 text-gray-500">
 										{step.text}
 									</p>
 								</div>

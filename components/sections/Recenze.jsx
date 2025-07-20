@@ -3,18 +3,12 @@ import React from 'react'
 import { motion } from 'framer-motion';
 const reviews = [
   {
-    name: "Jan Novák",
-    title: "Majitel firmy Novatech",
     text: "Skvělá spolupráce od začátku do konce. Precizní výroba a výborná komunikace. Určitě doporučuji!",
   },
   {
-    name: "Petra Dvořáková",
-    title: "Technická projektantka",
     text: "Rychlé dodání, flexibilní přístup a výstupní kontrola na vysoké úrovni. Velká spokojenost.",
   },
   {
-    name: "Tomáš Malý",
-    title: "Vedoucí nákupu, STmetal",
     text: "Dodávky vždy včas a bez problémů. Skvělý partner pro zakázkovou výrobu.",
   },
 ];
@@ -47,10 +41,6 @@ function Recenze() {
                 }}
             >
               <p className="text-gray-700 mb-4 italic">“{review.text}”</p>
-              <div className="text-sm text-gray-600">
-                <strong className="text-blue-700">{review.name}</strong>
-                <div>{review.title}</div>
-              </div>
             </motion.div>
           ))}
         </div>

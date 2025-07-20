@@ -29,7 +29,7 @@ export default function Navbar() {
 
 	const navLinks = [
 		{ label: "O NÁS", href: "/o-nas" },
-		{ label: "TECHNOLOGIE", href: "/technika" },
+		{ label: "TECHNOLOGIE", href: "/technologie" },
 		{ label: "GALERIE", href: "/galerie" },
 		{ label: "KONTAKT", href: "/kontakt" },
 	];
@@ -38,7 +38,7 @@ export default function Navbar() {
 		<header
 			className={`${
                     pathname === '/' ? 'fixed' : 'relative'
-                } top-0 left-0 w-full z-50 shadow-msd h-16 text-white ${
+                } bg-deev top-0 left-0 w-full z-50 shadow-msd  text-white ${
 				scrolled
 					? "bg-zinc-900"
 					: "md:bg-gradient-to-b md:from-zinc-900 md:to-transparent bg-zinc-900/75"

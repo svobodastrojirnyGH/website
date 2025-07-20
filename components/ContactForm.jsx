@@ -2,19 +2,23 @@ import { sendMessage } from '@/app/lib/actions';
 import React from 'react'
 
 
-function ContactForm({ success }) {
-
-    const submitted = success == 1 
-
+function ContactForm({callbackUrl, submitted }) {
+    
+    let success = submitted == 1
+    
 
   return (
     <div className="bg-white shadow-xl rounded-xl p-8 w-full">
       <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">
         Napište nám
       </h2>
-      {submitted ? (
+      {submitted === '1' ? (
         <p className="text-green-600 font-semibold text-center">
           Děkujeme! Brzy se vám ozveme.
+        </p>
+      ) : submitted === '0' ? (
+        <p className="text-red-600 font-semibold text-center">
+          Odeslat správu se nepodařilo! Prosím, využijte jinou formu kontaktu.
         </p>
       ) : (
         <form action={sendMessage} className="space-y-5">
@@ -56,6 +60,7 @@ function ContactForm({ success }) {
               className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-blue-700 focus:border-blue-700 resize-none"
             />
           </div>
+            <input type="hidden" name="callbackUrl" value={callbackUrl} />
 
           <button
             type="submit"
