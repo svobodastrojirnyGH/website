@@ -10,13 +10,13 @@ export default function Footer() {
           {/* Left: Company Info */}
           <div className="text-center md:text-left">
             <p className="text-lg font-semibold">Strojírny Svoboda, s.r.o</p>
-            <p className="text-sm">© {new Date().getFullYear()} All rights reserved.</p>
+            <p className="text-sm">© {new Date().getFullYear()} Všechny práva vyhrazena.</p>
           </div>
 
           {/* Center: Social Icons */}
           <div className="flex gap-5">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/strojirnysvoboda/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
