@@ -12,10 +12,10 @@ function LoginForm() {
 
     return (
         <form action={formAction} className="max-w-sm mx-auto mt-20">
-            <h1 className="text-xl mb-4 font-semibold">Login</h1>
+            <h1 className="text-xl mb-4 font-semibold">Přihlášení Administrátora</h1>
 
             <label htmlFor="username" className="block mb-1">
-                Username
+                Přihlašovací jméno
             </label>
             <input
                 id="username"
@@ -26,7 +26,7 @@ function LoginForm() {
             />
 
             <label htmlFor="password" className="block mb-1">
-                Password
+                Heslo
             </label>
             <input
                 id="password"
