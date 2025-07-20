@@ -24,7 +24,7 @@ function Kontakt({ callbackUrl, submitted }) {
                             </div>
                             <div>
                                 <h3 className="text-md font-semibold text-gray-800 ">Adresa</h3>
-                                <p className="text-gray-600">Průmyslová 123, 123 45 Město</p>
+                                <p className="text-gray-600">Kostelní 61, 281 23 Starý Kolín</p>
                             </div>
                         </div>
 
