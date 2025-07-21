@@ -47,7 +47,7 @@ export default function Navbar() {
 
             {/* '/' → fixed; '/*' → relative */}
             {/* '/' + unscrolled → transparent; else → filled */}
-			<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between md:justify-start space-x-12 items-center">
+			<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between md:justify-start space-x-12 items-center select-none">
 				
                 {/* Logo */}
 				<Link href="/">

@@ -16,6 +16,7 @@ export default async function Home({searchParams}) {
 		<>
         <Herosection />
         <ProcMy />
+        <div id="sluzbyStart" className="scroll-mt-18 md:scroll-mt-16"></div>
         <Sluzba data={strojirenskaVyroba} />
         <Sluzba data={zamecnickePrace} />
         <Stepper />

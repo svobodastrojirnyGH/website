@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function PageHeader({ title = '', image = '', breadcrumb = [] }) {
   return (
-    <section className="relative h-64 w-full overflow-hidden">
+    <section className="relative h-64 w-full overflow-hidden select-none">
       {/* Background Image with subtle zoom-in animation */}
       <motion.div
         initial={{ scale: 1.05 }}
