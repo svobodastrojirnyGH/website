@@ -123,7 +123,7 @@ export default function AboutPage() {
 					</div>
 					<div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
 						<Image
-							src="/images/about/factory-inside.jpg"
+							src="/images/dilna.webp"
 							alt="Strojírna"
 							fill
 							className="object-cover"

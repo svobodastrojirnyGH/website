@@ -52,7 +52,7 @@ export const zamecnickePrace = {
 
     {
       icon: WeldingIcon,
-      title: "Ruzne zvářecí metódy",
+      title: "Různé svářecí metody",
       description:
         "Svářime MIG, TIG, plamenem i laserem.",
     },
@@ -66,7 +66,7 @@ export const zamecnickePrace = {
       icon: CraneIcon,
       title: "Montáž na místě",
       description:
-        "Zajišťujeme i kompletní montáže přímo na místě - řešení na klíč.",
+        "V okolí zajišťujeme i kompletní montáže přímo na místě - řešení na klíč.",
     },
   ],
 };

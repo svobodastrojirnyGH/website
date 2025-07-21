@@ -3,9 +3,7 @@ import React from 'react'
 
 
 function ContactForm({callbackUrl, submitted }) {
-    
-    let success = submitted == 1
-    
+       
 
   return (
     <div className="bg-white shadow-xl rounded-xl p-8 w-full">
@@ -23,6 +21,14 @@ function ContactForm({callbackUrl, submitted }) {
       ) : (
         <form action={sendMessage} className="space-y-5">
           <div>
+            <input
+                type="text"
+                name="company" // Not a common autofill field
+                autoComplete="off"
+                tabIndex="-1"
+                aria-hidden="true"
+                className="sr-only"
+                />
             <label htmlFor="name" className="block font-medium text-gray-700">
               Jméno a příjmení
             </label>
@@ -61,6 +67,7 @@ function ContactForm({callbackUrl, submitted }) {
             />
           </div>
             <input type="hidden" name="callbackUrl" value={callbackUrl} />
+
 
           <button
             type="submit"
