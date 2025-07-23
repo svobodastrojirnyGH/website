@@ -1,10 +1,12 @@
+export const revalidate = 86400; //1 day
+
 import { client } from "@/sanity/lib/client";
 import { MACHINERY_QUERY } from "@/sanity/lib/queries";
 import PageHeader from "@/components/ui/PageHeader";
 import TechCard from "@/components/TechCard";
 
 export default async function page() {
-	const machineryItems = await client.fetch(MACHINERY_QUERY);
+	const machineryItems = await client.fetch(MACHINERY_QUERY); 
 
 	const grouped = machineryItems.reduce((acc, item) => {
 		const category = item.machineryCategory?.title || "Uncategorized";

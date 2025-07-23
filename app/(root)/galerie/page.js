@@ -1,3 +1,5 @@
+export const revalidate = 7200; // 2 hours
+
 import GalleryClient from "@/components/gallery/GalleryClient";
 import PageHeader from "@/components/ui/PageHeader";
 import { client } from "@/sanity/lib/client";

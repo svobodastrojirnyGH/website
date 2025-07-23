@@ -4,5 +4,7 @@ import { machineryCategory } from "./machineryCategory";
 import { machineryItem } from "./machineryItem";
 
 export const schema = {
-  types: [galleryCategory, galleryImage, machineryCategory, machineryItem],
+  types: [galleryCategory, galleryImage, machineryCategory, machineryItem,
+    
+  ],
 }

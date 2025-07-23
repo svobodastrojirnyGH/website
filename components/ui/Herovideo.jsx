@@ -13,7 +13,7 @@ function Herovideo() {
           >
             {/* <source src="/hero-video.webm" type="video/webm" />
             <source src="/hero-video.mp4" type="video/mp4" /> */}
-            <source src="/videos/lathe1_full_freeconvert.webm" type="video/mp4" />
+            <source src="/videos/hero-optimized.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
   )
